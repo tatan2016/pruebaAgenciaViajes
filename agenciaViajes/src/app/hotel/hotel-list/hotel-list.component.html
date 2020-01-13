@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="card">
+        <div class="card-body">
+            <div class="card">
+                <div class="card-header text-uppercase">
+                    <strong>Listado de agencias</strong>
+                </div>
+                <div class="card-body">
+                    <div *ngIf="service.listHoteles?.length === 0" class="text-center">
+                        <small class="text-muted">-- No se encontraron registros --</small>
+                    </div>
+                    <table class="table table-sm text-center table-hover" *ngIf="service.listHoteles?.length !== 0">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Nit</th>
+                                <th scope="col">Agencia</th>
+                                <th scope="col">Nombre</th>
+                                <th scope="col">Teléfono</th>
+                                <th scope="col">Dirección</th>
+                                <th scope="col">Estado</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let hotel of service.listHoteles; index as i">
+                                <th scope="row">{{i + 1}}</th>
+                                <td>{{hotel.Nit}}</td>
+                                <td>{{hotel.AgenciaId}}</td>
+                                <td>{{hotel.NombreHotel}}</td>
+                                <td>{{hotel.TelefonoHotel}}</td>
+                                <td>{{hotel.DireccionHotel}}</td>
+                                <td><span class="badge badge-success">{{hotel.Estado}}</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

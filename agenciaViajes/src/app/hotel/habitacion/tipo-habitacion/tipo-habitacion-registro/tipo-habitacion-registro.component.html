@@ -1,0 +1,42 @@
+<div class="card">
+    <div class="card-header text-uppercase">
+        Registro de tipo
+    </div>
+    <div class="card-body">
+        <form #form="ngForm" autocomplete="off" (submit)="onSubmit(form)">
+            <input type="hidden" name="Id" [value]="service.formData.Id">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text bg-white">
+                                    <i class="fas fa-bed" [class.green-icon]="NombreTipo.valid" [class.red-icon]="NombreTipo.invalid && NombreTipo.touched"></i>
+                                </div>
+                            </div>
+                            <input name="NombreTipo" #NombreTipo="ngModel" [(ngModel)]="service.formData.NombreTipo" class="form-control" placeholder="Nombre tipo de habitación" required maxlength="50" minlength="1">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text bg-white">
+                                    <i class="fas fa-bars"></i>
+                                </div>
+                            </div>
+                            <textarea name="DescripcionTipo" #DescripcionTipo="ngModel" [(ngModel)]="service.formData.DescripcionTipo" class="form-control" placeholder="Descripción tipo de habitación" maxlength="150" minlength="1"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <button type="button" class="btn btn-primary" (click)="resetForm(form)"><i class="fas fa-ban"></i>&nbsp;Cancelar</button>&nbsp;
+                    <button type="submit" class="btn btn-primary" [disabled]="form.invalid"><i class="fas fa-save"></i>&nbsp;Guardar</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

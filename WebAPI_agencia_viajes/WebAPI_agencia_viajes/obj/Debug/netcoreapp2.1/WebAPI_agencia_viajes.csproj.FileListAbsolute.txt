@@ -1,0 +1,14 @@
+C:\Users\Jhonatan\Documents\Proyectos\WebAPI_agencia_viajes\WebAPI_agencia_viajes\bin\Debug\netcoreapp2.1\WebAPI_agencia_viajes.deps.json
+C:\Users\Jhonatan\Documents\Proyectos\WebAPI_agencia_viajes\WebAPI_agencia_viajes\bin\Debug\netcoreapp2.1\WebAPI_agencia_viajes.runtimeconfig.json
+C:\Users\Jhonatan\Documents\Proyectos\WebAPI_agencia_viajes\WebAPI_agencia_viajes\bin\Debug\netcoreapp2.1\WebAPI_agencia_viajes.runtimeconfig.dev.json
+C:\Users\Jhonatan\Documents\Proyectos\WebAPI_agencia_viajes\WebAPI_agencia_viajes\bin\Debug\netcoreapp2.1\WebAPI_agencia_viajes.dll
+C:\Users\Jhonatan\Documents\Proyectos\WebAPI_agencia_viajes\WebAPI_agencia_viajes\bin\Debug\netcoreapp2.1\WebAPI_agencia_viajes.pdb
+C:\Users\Jhonatan\Documents\Proyectos\WebAPI_agencia_viajes\WebAPI_agencia_viajes\obj\Debug\netcoreapp2.1\WebAPI_agencia_viajes.csprojAssemblyReference.cache
+C:\Users\Jhonatan\Documents\Proyectos\WebAPI_agencia_viajes\WebAPI_agencia_viajes\obj\Debug\netcoreapp2.1\WebAPI_agencia_viajes.csproj.CoreCompileInputs.cache
+C:\Users\Jhonatan\Documents\Proyectos\WebAPI_agencia_viajes\WebAPI_agencia_viajes\obj\Debug\netcoreapp2.1\WebAPI_agencia_viajes.RazorAssemblyInfo.cache
+C:\Users\Jhonatan\Documents\Proyectos\WebAPI_agencia_viajes\WebAPI_agencia_viajes\obj\Debug\netcoreapp2.1\WebAPI_agencia_viajes.RazorAssemblyInfo.cs
+C:\Users\Jhonatan\Documents\Proyectos\WebAPI_agencia_viajes\WebAPI_agencia_viajes\obj\Debug\netcoreapp2.1\WebAPI_agencia_viajes.AssemblyInfoInputs.cache
+C:\Users\Jhonatan\Documents\Proyectos\WebAPI_agencia_viajes\WebAPI_agencia_viajes\obj\Debug\netcoreapp2.1\WebAPI_agencia_viajes.AssemblyInfo.cs
+C:\Users\Jhonatan\Documents\Proyectos\WebAPI_agencia_viajes\WebAPI_agencia_viajes\obj\Debug\netcoreapp2.1\WebAPI_agencia_viajes.RazorTargetAssemblyInfo.cache
+C:\Users\Jhonatan\Documents\Proyectos\WebAPI_agencia_viajes\WebAPI_agencia_viajes\obj\Debug\netcoreapp2.1\WebAPI_agencia_viajes.dll
+C:\Users\Jhonatan\Documents\Proyectos\WebAPI_agencia_viajes\WebAPI_agencia_viajes\obj\Debug\netcoreapp2.1\WebAPI_agencia_viajes.pdb

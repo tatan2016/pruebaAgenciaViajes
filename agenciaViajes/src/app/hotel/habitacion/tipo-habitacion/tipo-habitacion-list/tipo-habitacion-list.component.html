@@ -1,0 +1,30 @@
+<div class="card">
+    <div class="card-header text-uppercase">
+        Listado de tipos
+    </div>
+    <div class="card-body">
+        <div *ngIf="service.listTipos?.length === 0" class="text-center">
+            <small class="text-muted">-- No se encontraron registros --</small>
+        </div>
+        <table class="table table-sm text-center table-hover" *ngIf="service.listTipos?.length !== 0">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Descripción</th>
+                    <th scope="col">Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let tipo of service.listTipos; index as i">
+                    <th scope="row">{{i + 1}}</th>
+                    <td (click)="populateForm(tipo)">{{tipo.NombreTipo}}</td>
+                    <td (click)="populateForm(tipo)">{{tipo.DescripcionTipo}}</td>
+                    <td>
+                        <div class="far fa-trash-alt fa-lg text-danger" (click)="onDelete(tipo.Id)"></div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

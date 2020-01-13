@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="card">
+        <div class="card-body">
+            <div class="card">
+                <div class="card-header text-uppercase">
+                    <strong>Listado de agencias</strong>
+                </div>
+                <div class="card-body">
+                    <div *ngIf="service.listAgencias?.length === 0" class="text-center">
+                        <small class="text-muted">-- No se encontraron registros --</small>
+                    </div>
+                    <table class="table table-sm text-center table-hover" *ngIf="service.listAgencias?.length !== 0">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Nit</th>
+                                <th scope="col">Nombre</th>
+                                <th scope="col">Teléfono</th>
+                                <th scope="col">Dirección</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let agencia of service.listAgencias; index as i">
+                                <th scope="row">{{i + 1}}</th>
+                                <td>{{agencia.Nit}}</td>
+                                <td>{{agencia.NombreAgencia}}</td>
+                                <td>{{agencia.TelefonoAgencia}}</td>
+                                <td>{{agencia.DireccionAgencia}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

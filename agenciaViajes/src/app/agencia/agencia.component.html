@@ -1,0 +1,74 @@
+<div class="container">
+    <div class="card">
+        <div class="card-body">
+            <div class="card">
+                <div class="card-header text-uppercase">
+                    <strong>Registro de agencias</strong>
+                </div>
+                <div class="card-body">
+                    <form #form="ngForm" autocomplete="off" (submit)="onSubmit(form)">
+                        <input type="hidden" name="Id" [value]="service.formData.Id">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text bg-white">
+                                                <i class="fab fa-avianex" [class.green-icon]="Nit.valid" [class.red-icon]="Nit.invalid && Nit.touched"></i>
+                                            </div>
+                                        </div>
+                                        <input name="Nit" #Nit="ngModel" [(ngModel)]="service.formData.Nit" class="form-control" placeholder="Nit agencia" required maxlength="10" minlength="1">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text bg-white">
+                                                <i class="fas fa-hotel" [class.green-icon]="NombreAgencia.valid" [class.red-icon]="NombreAgencia.invalid && NombreAgencia.touched"></i>
+                                            </div>
+                                        </div>
+                                        <input name="NombreAgencia" #NombreAgencia="ngModel" [(ngModel)]="service.formData.NombreAgencia" class="form-control" placeholder="Nombre agencia" required maxlength="50" minlength="1">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text bg-white">
+                                                <i class="fas fa-phone-square" [class.green-icon]="TelefonoAgencia.valid" [class.red-icon]="TelefonoAgencia.invalid && TelefonoAgencia.touched"></i>
+                                            </div>
+                                        </div>
+                                        <input name="TelefonoAgencia" #TelefonoAgencia="ngModel" [(ngModel)]="service.formData.TelefonoAgencia" class="form-control" placeholder="Teléfono agencia" required maxlength="10" minlength="10">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text bg-white">
+                                                <i class="fas fa-map-marker-alt" [class.green-icon]="DireccionAgencia.valid" [class.red-icon]="DireccionAgencia.invalid && DireccionAgencia.touched"></i>
+                                            </div>
+                                        </div>
+                                        <input name="DireccionAgencia" #DireccionAgencia="ngModel" [(ngModel)]="service.formData.DireccionAgencia" class="form-control" placeholder="Dirección agencia" required maxlength="50" minlength="1">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <button type="button" class="btn btn-primary" (click)="resetForm(form)"><i class="fas fa-ban"></i>&nbsp;Cancelar</button>&nbsp;
+                                <button type="submit" class="btn btn-primary" [disabled]="form.invalid"><i class="fas fa-save"></i>&nbsp;Guardar</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

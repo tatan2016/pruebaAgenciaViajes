@@ -1,0 +1,91 @@
+<div class="container">
+    <div class="card">
+        <div class="card-body">
+            <div class="card">
+                <div class="card-header text-uppercase">
+                    <strong>Registro de hoteles</strong>
+                </div>
+                <div class="card-body">
+                    <form #form="ngForm" autocomplete="off" (submit)="onSubmit(form)">
+                        <input type="hidden" name="Id" [value]="service.formData.Id">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text bg-white">
+                                                <i class="fab fa-avianex"></i>
+                                            </div>
+                                        </div>
+                                        <select class="form-control" id="exampleFormControlSelect1" name="AgenciaId" #AgenciaId="ngModel" [(ngModel)]="service.formData.AgenciaId">
+                                            <option value="0">-- Seleccione agencia --</option>
+                                            <option *ngFor="let agencia of service.listAgencias;" value="{{agencia.Id}}">{{agencia.NombreAgencia}}</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text bg-white">
+                                                <i class="fab fa-avianex" [class.green-icon]="Nit.valid" [class.red-icon]="Nit.invalid && Nit.touched"></i>
+                                            </div>
+                                        </div>
+                                        <input name="Nit" #Nit="ngModel" [(ngModel)]="service.formData.Nit" class="form-control" placeholder="Nit hotel" required maxlength="20" minlength="1">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text bg-white">
+                                                <i class="fas fa-hotel" [class.green-icon]="NombreHotel.valid" [class.red-icon]="NombreHotel.invalid && NombreHotel.touched"></i>
+                                            </div>
+                                        </div>
+                                        <input name="NombreHotel" #NombreHotel="ngModel" [(ngModel)]="service.formData.NombreHotel" class="form-control" placeholder="Nombre hotel" required maxlength="50" minlength="1">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text bg-white">
+                                                <i class="fab fa-avianex" [class.green-icon]="TelefonoHotel.valid" [class.red-icon]="TelefonoHotel.invalid && TelefonoHotel.touched"></i>
+                                            </div>
+                                        </div>
+                                        <input name="TelefonoHotel" #TelefonoHotel="ngModel" [(ngModel)]="service.formData.TelefonoHotel" class="form-control" placeholder="Teléfono hotel" required maxlength="10" minlength="1">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text bg-white">
+                                                <i class="fas fa-hotel" [class.green-icon]="DireccionHotel.valid" [class.red-icon]="DireccionHotel.invalid && DireccionHotel.touched"></i>
+                                            </div>
+                                        </div>
+                                        <input name="DireccionHotel" #DireccionHotel="ngModel" [(ngModel)]="service.formData.DireccionHotel" class="form-control" placeholder="Dirección hotel" required maxlength="50" minlength="1">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row ">
+                            <div class="col-md-12 ">
+                                <button type="button " class="btn btn-primary " (click)="resetForm(form) "><i class="fas fa-ban "></i>&nbsp;Cancelar</button>&nbsp;
+                                <button type="submit " class="btn btn-primary " [disabled]="form.invalid "><i class="fas fa-save "></i>&nbsp;Guardar</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
